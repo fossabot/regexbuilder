@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "name": "regexbuilder",
+  "alias": "regexbuilder",
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@now/next"
+    }
+  ]
+}

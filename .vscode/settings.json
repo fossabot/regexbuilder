@@ -1,0 +1,19 @@
+{
+  "spellright.language": [
+    "de",
+    "en"
+  ],
+  "spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext",
+    "xml",
+    "javascriptreact",
+    "wallaby-output"
+  ],
+  "spellright.parserByClass": {
+    "wallaby-output": {
+      "parser": "code"
+    }
+  }
+}
