@@ -1,3 +1,3 @@
 # regex
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4771a160e886482895da8ae68a6bdefb)](https://app.codacy.com/app/KoalasBruder/regexbuild?utm_source=github.com&utm_medium=referral&utm_content=NieLeben/regexbuild&utm_campaign=Badge_Grade_Settings) ![GitHub](https://img.shields.io/github/license/NieLeben/regexbuild.svg?style=flat-square)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4d88c538b96141cbaf19838ed16cd821)](https://www.codacy.com/app/KoalasBruder/regexbuilder?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=NieLeben/regexbuilder&amp;utm_campaign=Badge_Grade) ![GitHub](https://img.shields.io/github/license/NieLeben/regexbuild.svg?style=flat-square)
