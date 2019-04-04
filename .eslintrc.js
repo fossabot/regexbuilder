@@ -25,7 +25,7 @@ module.exports = {
   },
   plugins: ["react", "prettier", "import"],
   rules: {
-    "linebreak-style": ["error", "windows"],
+    "linebreak-style": ["error", "unix"],
     quotes: ["error", "double"],
     "react/jsx-one-expression-per-line": [0],
     "react/destructuring-assignment": [0]
