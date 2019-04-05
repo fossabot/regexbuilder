@@ -33,6 +33,8 @@
     ]
   },
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-source-maps": "^0.0.3",
     "next": "8.0.0",
     "prop-types": "15.7.2",
     "react": "16.7.0",
