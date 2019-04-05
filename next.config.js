@@ -1,7 +1,7 @@
-const withESLint = require("next-eslint");
 const path = require("path");
+const withCSS = require("@zeit/next-css");
 
-module.exports = withESLint({
+module.exports = withCSS({
   target: "serverless",
   // eslint-disable-next-line no-unused-vars
   webpack(config, options) {
