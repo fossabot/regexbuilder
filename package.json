@@ -13,11 +13,11 @@
   "bugs": {
     "url": "https://github.com/NieLeben/regexbuilder/issues"
   },
-  "main": "pages/index.js",
+  "main": "src/pages/index.js",
   "scripts": {
-    "build": "next ./src build",
-    "dev": "next ./src",
-    "now-build": "next ./src build",
+    "build": "next build",
+    "dev": "next",
+    "now-build": "next build",
     "lint-staged": "lint-staged",
     "lint": "eslint --fix --ext .js,.jsx ./"
   },
