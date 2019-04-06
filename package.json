@@ -35,13 +35,13 @@
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-source-maps": "^0.0.3",
-    "next": "8.0.0",
+    "next": "8.0.4",
     "prop-types": "15.7.2",
-    "react": "16.7.0",
-    "react-dom": "16.7.0"
+    "react": "16.8.6",
+    "react-dom": "16.8.6"
   },
   "devDependencies": {
-    "eslint": "5.15.2",
+    "eslint": "5.16.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-config-prettier": "4.1.0",
     "eslint-loader": "^2.1.2",
