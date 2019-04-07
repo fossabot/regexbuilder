@@ -1,0 +1,43 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+  yarn_install:
+    docker:
+      - image: circleci/node:11.13.0
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - yarn-packages-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+  yarn_test:
+    docker:
+      - image: circleci/node:11.13.0
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - yarn-packages-{{ checksum "yarn.lock" }}
+      - run:
+        name: Running test and creating coverage
+        command: yarn test --coverage && cat ./coverage/lcov.info | codacy-coverage
+workflows:
+  version: 2
+  test_and_coverage:
+    jobs:
+      - yarn_install
+      - yarn_test
