@@ -61,6 +61,9 @@ jobs:
           name: Restore node_modules
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
+          name: Install now-cli
+          command: yarn global add now
+      - run:
           name: Running semantic-release
           command: yarn release
 workflows:
