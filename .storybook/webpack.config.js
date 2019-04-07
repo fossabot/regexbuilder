@@ -9,5 +9,10 @@ const path = require('path');
 
 module.exports = async ({ config, mode }) => {
   config.resolve.modules.push(path.resolve('./'));
+  config.module.rules.push({
+    test: /_story\.jsx?$/,
+    loaders: [require.resolve('@storybook/addon-storysource/loader')],
+    enforce: 'pre',
+  });
   return config;
 };
