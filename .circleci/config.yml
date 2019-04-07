@@ -32,6 +32,7 @@ jobs:
           name: Restore Yarn Package Cache
           keys:
             - yarn-packages-{{ checksum "yarn.lock" }}
+      - run: yarn
       - run:
           name: Running test and creating coverage
           command: yarn test --coverage && cat ./coverage/lcov.info | codacy-coverage
