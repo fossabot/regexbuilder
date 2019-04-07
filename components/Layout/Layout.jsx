@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import { Link } from 'components';
 
 export default function Layout() {
   return (
@@ -14,6 +15,9 @@ export default function Layout() {
       </Head>
       <div className='l-header'>
         <h1>Company Name</h1>
+        <Link href='https://youtube.com' page='https://youtube.com'>
+          Youtube
+        </Link>
       </div>
       <div className='l-content'>
         <h1>NICE</h1>
