@@ -2,6 +2,9 @@
   "version": 2,
   "name": "regexbuilder",
   "alias": "regexbuilder",
+  "github": {
+    "autoAlias": false
+  },
   "builds": [
     {
       "src": "next.config.js",
