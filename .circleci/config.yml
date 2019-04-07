@@ -33,8 +33,8 @@ jobs:
           keys:
             - yarn-packages-{{ checksum "yarn.lock" }}
       - run:
-        name: Running test and creating coverage
-        command: yarn test --coverage && cat ./coverage/lcov.info | codacy-coverage
+          name: Running test and creating coverage
+          command: yarn test --coverage && cat ./coverage/lcov.info | codacy-coverage
 workflows:
   version: 2
   test_and_coverage:
