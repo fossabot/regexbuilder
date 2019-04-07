@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render without crashing 1`] = `
+<div>
+  <div
+    className="l-header"
+  >
+    <h1>
+      Company Name
+    </h1>
+    <a
+      className="normal"
+      href="https://youtube.com"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      Youtube
+    </a>
+  </div>
+  <div
+    className="l-content"
+  >
+    <h1>
+      NICE
+    </h1>
+  </div>
+  <div
+    className="l-footer"
+  >
+    <p>
+      Copyright (c) 2014 Company Name
+    </p>
+  </div>
+</div>
+`;
