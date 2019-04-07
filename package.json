@@ -24,6 +24,7 @@
     "prebuild:storybook": "yarn run test:generate-output",
     "build-storybook": "build-storybook",
     "test": "jest",
+    "test:coverage": "jest --coverage && cat ./coverage/lcov.info | codacy-coverage",
     "test:generate-output": "jest --json --outputFile=.jest-test-results.json || true"
   },
   "pre-commit": "lint-staged",

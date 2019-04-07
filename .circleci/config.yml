@@ -35,7 +35,7 @@ jobs:
       - run: yarn
       - run:
           name: Running test and creating coverage
-          command: yarn test --coverage && cat ./coverage/lcov.info | codacy-coverage
+          command: yarn test:coverage
 workflows:
   version: 2
   test_and_coverage:
