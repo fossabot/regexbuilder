@@ -6,10 +6,8 @@ import { Link } from 'components';
 
 storiesOf('Components', module)
   .addParameters({ jest: ['Link'] })
-  .add('Link', () => {
-    return (
+  .add('Link', () => (
       <Link href='https://google.com' page='https://google.com'>
         Google
       </Link>
-    );
-  });
+    ));

@@ -3,3 +3,7 @@ README.md
 node_modules
 yarn.lock
 yarn-error.log
+.storybook
+coverage
+storybook-static
+.jest-test-result.json
