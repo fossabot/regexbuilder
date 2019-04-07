@@ -1,0 +1,85 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+  yarn_install:
+    docker:
+      - image: circleci/node:11.13.0
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore node_modules
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile
+      - save_cache:
+          name: Save node_modules
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+  yarn_test_coverage:
+    docker:
+      - image: circleci/node:11.13.0
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore node_modules
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Running ESLint
+          command: yarn lint
+      - run:
+          name: Running tests and creating coverage
+          command: yarn test:coverage
+  yarn_test:
+    docker:
+      - image: circleci/node:11.13.0
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore node_modules
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Running ESLint
+          command: yarn lint
+      - run:
+          name: Running tests
+          command: yarn test
+  yarn_release:
+    docker:
+      - image: circleci/node:11.13.0
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore node_modules
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Install now-cli
+          command: yarn global add now
+      - run:
+          name: Running semantic-release
+          command: yarn release
+workflows:
+  version: 2
+  default:
+    jobs:
+      - yarn_install
+      - yarn_test_coverage:
+          requires:
+            - yarn_install
+  release:
+    jobs:
+      - yarn_install:
+          filters:
+            branches:
+              only: master
+      - yarn_test:
+          requires:
+            - yarn_install
