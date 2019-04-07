@@ -83,3 +83,6 @@ workflows:
       - yarn_test:
           requires:
             - yarn_install
+      - yarn_release:
+          requires:
+            - yarn_test
