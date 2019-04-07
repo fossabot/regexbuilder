@@ -49,7 +49,6 @@
     "verbose": true
   },
   "release": {
-    "branch": "release",
     "plugins": [
       "@semantic-release/commit-analyzer",
       [

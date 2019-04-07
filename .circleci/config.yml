@@ -79,7 +79,7 @@ workflows:
       - yarn_install:
           filters:
             branches:
-              only: release
+              only: master
       - yarn_test:
           requires:
             - yarn_install
