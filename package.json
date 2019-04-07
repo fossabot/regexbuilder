@@ -19,9 +19,12 @@
     "dev": "next",
     "now-build": "next build",
     "lint-staged": "lint-staged",
-    "lint": "eslint --fix --ext .js,.jsx ./",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "lint": "eslint --ignore-path .gitignore --fix --ext .js,.jsx ./",
+    "storybook": "yarn run prebuild:storybook && start-storybook -p 6006",
+    "prebuild:storybook": "yarn run test:generate-output",
+    "build-storybook": "build-storybook",
+    "test": "jest",
+    "test:generate-output": "jest --json --outputFile=.jest-test-results.json || true"
   },
   "pre-commit": "lint-staged",
   "lint-staged": {
@@ -33,6 +36,14 @@
       "eslint --fix",
       "git add"
     ]
+  },
+  "jest": {
+    "rootDir": "./",
+    "moduleDirectories": [
+      "node_modules",
+      "./"
+    ],
+    "verbose": true
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
@@ -46,12 +57,14 @@
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
     "@storybook/addon-actions": "^5.0.6",
+    "@storybook/addon-jest": "^5.0.6",
     "@storybook/addon-links": "^5.0.6",
     "@storybook/addons": "^5.0.6",
     "@storybook/react": "^5.0.6",
+    "babel-jest": "^24.7.1",
     "babel-loader": "^8.0.5",
-    "babel-preset-env": "^1.7.0",
     "eslint": "5.16.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-config-prettier": "4.1.0",
@@ -62,10 +75,12 @@
     "eslint-plugin-react": "7.12.4",
     "husky": "^1.3.1",
     "install-peers": "1.0.3",
+    "jest": "^24.7.1",
     "lint-staged": "8.1.5",
     "preact": "8.4.2",
     "prettier": "1.16.4",
     "react-scripts": "^2.1.8",
+    "react-test-renderer": "^16.8.6",
     "webpack": "4.29.6"
   }
 }
