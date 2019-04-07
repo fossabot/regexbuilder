@@ -7,6 +7,7 @@ export default class Home extends Component {
       <Layout>
         <div>
           <h1>NICE</h1>
+          <h2>HH</h2>
         </div>
       </Layout>
     );
