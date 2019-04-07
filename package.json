@@ -84,7 +84,9 @@
     "prettier": "1.16.4",
     "react-scripts": "^2.1.8",
     "react-test-renderer": "^16.8.6",
-    "webpack": "4.29.6",
+    "webpack": "4.29.6"
+  },
+  "optionalDependencies": {
     "codacy-coverage": "^3.4.0"
   }
 }
