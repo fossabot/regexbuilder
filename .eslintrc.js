@@ -11,6 +11,8 @@ module.exports = {
     'prettier',
     'prettier/react',
     'plugin:import/warnings',
+    'plugin:jest/recommended',
+    'plugin:react/recommended',
   ],
 
   globals: {
@@ -24,7 +26,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['react', 'prettier', 'import'],
+  plugins: ['react', 'prettier', 'import', 'jest'],
   rules: {
     'linebreak-style': ['error', 'unix'],
     quotes: [
