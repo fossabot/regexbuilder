@@ -109,7 +109,7 @@
     "prettier": "1.16.4",
     "react-scripts": "^2.1.8",
     "react-test-renderer": "^16.8.6",
-    "webpack": "4.29.6"
+    "webpack": "4.30.0"
   },
   "optionalDependencies": {
     "@semantic-release/changelog": "^3.0.2",
