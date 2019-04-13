@@ -5,10 +5,7 @@ export default class Home extends Component {
   render() {
     return (
       <Layout>
-        <div>
-          <h1>NICE</h1>
-          <h2>HH</h2>
-        </div>
+        <h1>NN</h1>
       </Layout>
     );
   }
