@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link should changes the class when hovered and if a href is supplied 1`] = `
+<a
+  className="normal"
+  href="https://youtube.com"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  Test
+</a>
+`;
+
+exports[`Link should changes the class when hovered and if a href is supplied 2`] = `
+<a
+  className="hovered"
+  href="https://youtube.com"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  Test
+</a>
+`;
+
+exports[`Link should changes the class when hovered and if a href is supplied 3`] = `
+<a
+  className="normal"
+  href="https://youtube.com"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  Test
+</a>
+`;
+
+exports[`Link should changes the class when hovered and no href is supplied 1`] = `
+<a
+  className="normal"
+  href="#"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  Test
+</a>
+`;
+
+exports[`Link should changes the class when hovered and no href is supplied 2`] = `
+<a
+  className="hovered"
+  href="#"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  Test
+</a>
+`;
+
+exports[`Link should changes the class when hovered and no href is supplied 3`] = `
+<a
+  className="normal"
+  href="#"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  Test
+</a>
+`;

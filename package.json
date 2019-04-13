@@ -24,9 +24,9 @@
     "storybook": "yarn run prebuild:storybook && start-storybook -p 6006",
     "prebuild:storybook": "yarn run test:generate-output",
     "build-storybook": "build-storybook",
-    "test": "jest",
-    "test:coverage": "jest --coverage && cat ./coverage/lcov.info | codacy-coverage",
-    "test:generate-output": "jest --json --outputFile=.jest-test-results.json || true",
+    "test": "jest --setupFiles dotenv/config",
+    "test:coverage": "jest --coverage --setupFiles dotenv/config && cat ./coverage/lcov.info | codacy-coverage",
+    "test:generate-output": "jest --json --outputFile=.jest-test-results.json --setupFiles dotenv/config || true",
     "release": "semantic-release"
   },
   "pre-commit": "lint-staged",
