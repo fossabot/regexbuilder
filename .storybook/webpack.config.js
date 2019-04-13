@@ -6,9 +6,12 @@
 // When you add this file, we won't add the default configurations which is similar
 // to "React Create App". This only has babel loader to load JavaScript.
 const path = require('path');
+const { parsed: localEnv } = require('dotenv').config();
+const webpack = require('webpack');
 
 module.exports = async ({ config, mode }) => {
   config.resolve.modules.push(path.resolve('./'));
+  config.plugins.push(new webpack.EnvironmentPlugin(localEnv));
   config.module.rules.push({
     test: /_story\.jsx?$/,
     loaders: [require.resolve('@storybook/addon-storysource/loader')],
