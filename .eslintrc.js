@@ -38,6 +38,7 @@ module.exports = {
     'react/destructuring-assignment': [0],
     'react/prefer-stateless-function': [0],
     'arrow-body-style': ['error', 'as-needed'],
+    'jsx-a11y/anchor-is-valid': [0],
   },
   settings: {
     'import/resolver': {
