@@ -4,4 +4,8 @@ import { storiesOf } from '@storybook/react';
 
 import { Layout } from 'components';
 
-storiesOf('Components', module).add('Layout', () => <Layout />);
+storiesOf('Components', module).add('Layout', () => (
+  <Layout>
+    <h1>HI</h1>
+  </Layout>
+));
