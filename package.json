@@ -20,7 +20,7 @@
     "now-build": "next build",
     "clean": "git clean -d -f",
     "lint-staged": "lint-staged",
-    "lint": "eslint --ignore-path .gitignore --fix --ext .js,.jsx ./",
+    "lint": "eslint --ignore-path .gitignore -f table --fix --ext .js,.jsx ./",
     "storybook": "yarn run prebuild:storybook && start-storybook -p 6006",
     "prebuild:storybook": "yarn run test:generate-output",
     "build-storybook": "build-storybook",
@@ -31,13 +31,13 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && yarn test",
+      "pre-commit": "yarn lint-staged && yarn test",
       "pre-push": "yarn test"
     }
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "eslint --fix",
+      "eslint --fix -f table",
       "prettier --write",
       "git add"
     ],
