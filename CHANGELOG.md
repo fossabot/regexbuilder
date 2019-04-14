@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/NieLeben/regexbuilder/compare/v2.0.1...v2.0.2) (2019-04-14)
+
+
+### Bug Fixes
+
+* **r:** FIxed ([655d262](https://github.com/NieLeben/regexbuilder/commit/655d262))
+
 ## [2.0.1](https://github.com/NieLeben/regexbuilder/compare/v2.0.0...v2.0.1) (2019-04-13)
 
 
