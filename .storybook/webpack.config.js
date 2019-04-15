@@ -13,9 +13,10 @@ module.exports = async ({ config, mode }) => {
   config.resolve.modules.push(path.resolve('./'));
   config.plugins.push(new webpack.EnvironmentPlugin(localEnv));
   config.module.rules.push({
-    test: /_story\.jsx?$/,
+    test: /_\.story\.jsx$/,
     loaders: [require.resolve('@storybook/addon-storysource/loader')],
     enforce: 'pre',
+    include: [path.resolve(__dirname, '../components')],
   });
   return config;
 };

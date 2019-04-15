@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 import { Layout } from 'components';
 
 storiesOf('Components', module)
-  .addParameter({ jest: ['Layout'] })
+  .addParameters({ jest: ['Layout'] })
   .add('Layout', () => (
     <Layout>
       <h1>HI</h1>

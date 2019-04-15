@@ -7,7 +7,7 @@ import { withA11y } from '@storybook/addon-a11y';
 // best place is in config.js
 addDecorator(withA11y);
 
-const req = require.context('../components', true, /_story\.jsx?$/);
+const req = require.context('../components', true, /_\.story\.jsx?$/);
 
 function loadStories() {
   req.keys().forEach(req);
