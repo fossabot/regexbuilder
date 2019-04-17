@@ -33,7 +33,10 @@ export default class Layout extends React.Component {
   }
 }
 Layout.propTypes = {
-  children: propTypes.element,
+  children: propTypes.oneOfType([
+    propTypes.arrayOf(propTypes.element),
+    propTypes.element,
+  ]),
 };
 Layout.defaultProps = {
   children: null,
