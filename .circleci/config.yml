@@ -35,7 +35,7 @@ jobs:
           command: yarn lint
       - run:
           name: Running tests and creating coverage
-          command: yarn test:coverage --token $CODACY_PROJECT_TOKEN
+          command: yarn test:coverage
   yarn_test:
     docker:
       - image: circleci/node:11.13.0
